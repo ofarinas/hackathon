@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
   <div class="header__title">
     Bank <span style="color:#666;">X</span>
   </div>
@@ -19,3 +20,20 @@
       <app-analyse></app-analyse>
     </mat-tab>
 </mat-tab-group>
+=======
+  <mat-sidenav-content>
+    <mat-toolbar class="retire-easy__toolbar">
+      <button class="mr-md" mat-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <div class="retire-easy__title flex items-center">
+        <div class="retire-easy__logo mr-md"></div>
+        Retire Easy
+      </div>
+    </mat-toolbar>
+    <div class="retire-easy__content pa-md">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+>>>>>>> c2dba04af77b3d114627131310a8a9e9b0d6e652
