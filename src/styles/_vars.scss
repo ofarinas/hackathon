@@ -1,0 +1,30 @@
+// border
+$defaultBorderRadius: 6px;
+$defaultBorderColor: #fff;
+
+//margin & padding sizes
+$xs: 6px;
+$sm: 12px;
+$md: 20px;
+$xl: 40px;
+
+// colors
+$default1: #000;
+$default2: #fff;
+
+// backgrounds
+$main_dark: #4f5b66;
+$main_light: #005b96;
+$bg_positive: #35a79c;
+$bg_negative: rgb(238, 64, 53);
+$bg_neutral: rgb(243, 119, 54);
+$bg_black: rgb(0, 0, 0);
+$bg_white: rgb(255, 255, 255);
+
+// text
+$txt_positive: $default2;
+$txt_negative: $default2;
+$txt_neutral: $default2;
+$txt_white: #000;
+$txt_black: #fff;
+$txt_green: #96ceb4;
