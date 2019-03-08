@@ -19,6 +19,6 @@ export class TwoFaceService {
     }
 
     login() {
-        this.http.post(environment.baseUrl, {}, this.httpOptions).subscribe(element => appState = element);
+        this.http.post(environment.baseUrl, {}, this.httpOptions).subscribe(element => appState.account = element);
     }
 }

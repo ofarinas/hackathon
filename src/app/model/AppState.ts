@@ -1,1 +1,1 @@
-export let appState = {};
+export const appState = {account: {}};
