@@ -10,7 +10,8 @@ import {
   MatToolbarModule,
   MatSidenavModule,
   MatListModule,
-  MatIconModule
+  MatIconModule,
+  MatTabsModule
 } from '@angular/material';
 import { HomeComponent } from './pages/home/home.component';
 import { AnalyseComponent } from './pages/analyse/analyse.component';
@@ -32,7 +33,8 @@ import { BarDiagramComponent } from './components/bar-diagram/bar-diagram.compon
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
-    MatIconModule
+    MatIconModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

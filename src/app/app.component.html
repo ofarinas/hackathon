@@ -1,34 +1,21 @@
-<mat-sidenav-container class="retire-easy">
-  <mat-sidenav
-    #sidenav
-    mode="side"
-    class="example-sidenav"
-    [fixedInViewport]="'fixed'"
-    [fixedTopGap]="0"
-    [fixedBottomGap]="0"
-  >
-    <mat-list role="list">
-      <mat-list-item role="listitem">
-        <a [routerLink]="['/']">Home</a>
-      </mat-list-item>
-      <mat-list-item role="listitem">
-        <a [routerLink]="['/analyse']">Analyse</a>
-      </mat-list-item>
-    </mat-list>
-  </mat-sidenav>
 
-  <mat-sidenav-content>
-    <mat-toolbar class="retire-easy__toolbar">
-      <button class="mr-md" mat-button (click)="sidenav.toggle()">
-        <mat-icon>menu</mat-icon>
-      </button>
-      <div class="retire-easy__title">
-        <div class="retire-easy__logo"></div>
-        Retire Easy
-      </div>
-    </mat-toolbar>
-    <div class="retire-easy__content pa-md">
-      <router-outlet></router-outlet>
-    </div>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+  <div class="header__title">
+    Bank <span style="color:#666;">X</span>
+  </div>
+  <div class="header__logout">
+    Hallo Herr Musterman!<br/><a href="#">logout</a>
+  </div>
+
+<mat-tab-group (selectedTabChange)="onLinkClick($event)">
+  <mat-tab label="Kontoumsätze">
+    <app-analyse></app-analyse>
+  </mat-tab>
+  <mat-tab label="Lorem">
+  </mat-tab>
+  <mat-tab label="Ipsum">
+    </mat-tab>
+  <mat-tab >
+      <div (click)="removeNotification()"><ng-template mat-tab-label >Analyse<div id="tabAnalyseNotification">1</div></ng-template></div>
+      <app-analyse></app-analyse>
+    </mat-tab>
+</mat-tab-group>
