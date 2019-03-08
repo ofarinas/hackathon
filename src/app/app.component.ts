@@ -1,5 +1,6 @@
 import { ContentfullService } from './services/contentfull/contentfull.service';
 import { Component } from '@angular/core';
+import { MatTabChangeEvent } from '@angular/material';
 
 @Component({
   selector: 'app-root',

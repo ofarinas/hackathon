@@ -80,11 +80,7 @@ body {
 
 .header {
 
-  &__toolbar {
-  }
-
   &__title {
-<<<<<<< HEAD
     margin-top: 20px;
     margin-bottom: 50px;
     font-family: 'Roboto Condensed';
@@ -98,16 +94,5 @@ body {
     right: 100px;
     top: 24px;
     text-align: right;
-=======
-    font-family: 'Baloo', cursive;
-    display: flex;
-  }
-
-  &__logo {
-    background-image: url('/assets/images/logo.jpg');
-    width: 30px;
-    height: 30px;
-    background-size: cover;
->>>>>>> c2dba04af77b3d114627131310a8a9e9b0d6e652
   }
 }
