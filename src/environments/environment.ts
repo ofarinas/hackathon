@@ -4,7 +4,7 @@
 
 export const environment = {
     production: false,
-    baseUrl: 'http://localhost:3000/auth'
+    baseUrl: 'https://hackthon11.herokuapp.com/auth'
 
 };
 
