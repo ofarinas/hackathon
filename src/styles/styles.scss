@@ -32,6 +32,8 @@ $retire-easy-theme: mat-light-theme(
 /* You can add global styles to this file, and also import other style files */
 
 @import './core';
+@import './frameworks/materializecss/materialize';
+@import url('https://fonts.googleapis.com/css?family=Baloo');
 
 html,
 body {
@@ -45,5 +47,15 @@ body {
 .retire-easy {
   &__content {
     height: 100vw;
+  }
+
+  &__title {
+    font-family: 'Baloo', cursive;
+  }
+
+  &__logo {
+    background-image: url('/assets/images/logo.jpg');
+    width: 10px;
+    height: 10px;
   }
 }

@@ -14,9 +14,15 @@ import {
 } from '@angular/material';
 import { HomeComponent } from './pages/home/home.component';
 import { AnalyseComponent } from './pages/analyse/analyse.component';
+import { BarDiagramComponent } from './components/bar-diagram/bar-diagram.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, AnalyseComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    AnalyseComponent,
+    BarDiagramComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

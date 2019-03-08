@@ -20,9 +20,12 @@
   <mat-sidenav-content>
     <mat-toolbar class="retire-easy__toolbar">
       <button class="mr-md" mat-button (click)="sidenav.toggle()">
-        <mat-icon>home</mat-icon>
+        <mat-icon>menu</mat-icon>
       </button>
-      Retire Easy
+      <div class="retire-easy__title">
+        <div class="retire-easy__logo"></div>
+        Retire Easy
+      </div>
     </mat-toolbar>
     <div class="retire-easy__content pa-md">
       <router-outlet></router-outlet>
