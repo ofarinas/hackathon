@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {environment} from '../../environments/environment';
+import {appState} from '../model/AppState';
 
 @Injectable({
     providedIn: 'root'
@@ -18,7 +19,6 @@ export class TwoFaceService {
     }
 
     login() {
-        this.http.post(environment.baseUrl, {}, this.httpOptions).
-        subscribe(element => console.log('hey', element));
+        this.http.post(environment.baseUrl, {}, this.httpOptions).subscribe(element => appState = element);
     }
 }
