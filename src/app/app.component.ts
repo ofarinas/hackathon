@@ -1,5 +1,6 @@
 import { ContentfullService } from './services/contentfull/contentfull.service';
 import { Component } from '@angular/core';
+import { MatTabChangeEvent } from '@angular/material';
 
 @Component({
   selector: 'app-root',
@@ -10,4 +11,12 @@ export class AppComponent {
   title = 'retire-easy';
 
   constructor(private cf: ContentfullService) {}
+
+  onLinkClick(event: MatTabChangeEvent) {
+    if (event.index===3) {
+      var element = document.getElementById('tabAnalyseNotification');
+      element.parentNode.removeChild(element);
+    } 
+  }
+
 }

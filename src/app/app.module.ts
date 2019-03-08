@@ -13,7 +13,8 @@ import {
   MatIconModule,
   MatFormFieldModule,
   MatInputModule,
-  MatSliderModule
+  MatSliderModule,
+  MatTabsModule
 } from '@angular/material';
 import { HomeComponent } from './pages/home/home.component';
 import { AnalyseComponent } from './pages/analyse/analyse.component';
@@ -44,7 +45,8 @@ import { ValueRowComponent } from './components/value-row/value-row.component';
     MatIconModule,
     MatFormFieldModule,
     MatInputModule,
-    MatSliderModule
+    MatSliderModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

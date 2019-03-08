@@ -33,34 +33,66 @@ $retire-easy-theme: mat-light-theme(
 
 @import './core';
 @import './frameworks/materializecss/materialize';
-@import url('https://fonts.googleapis.com/css?family=Baloo');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700');
 
 html,
 body {
   height: 100%;
 }
 body {
-  margin: 0;
+  margin: 0 100px;
   font-family: Roboto, 'Helvetica Neue', sans-serif;
 }
 
-.retire-easy {
-  &__content {
-    height: 100vw;
-  }
+.mat-toolbar {
+  background-color: #fff;
+}
 
-  &__toolbar {
-  }
+.mat-ink-bar {
+  background-color: #039be5 !important;
+}
+
+.mat-tab-label {
+  opacity: 1 !important;
+  color: #666;
+}
+
+
+#tabAnalyseNotification {
+  color: #fff !important;
+  background-color: #ff0066;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  font-size: 10px;
+  position: relative;
+  left: 4px;
+  bottom: 4px;
+  animation:bounce 4s ease-out infinite;
+}
+
+@keyframes bounce {
+  0%, 5%, 12.5%, 20%, 100% { transform: translateY(0px); }
+  10% { transform: translateY(-12px); }
+  15% { transform: translateY(-5px); }
+}
+
+
+.header {
 
   &__title {
-    font-family: 'Baloo', cursive;
-    display: flex;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-family: 'Roboto Condensed';
+    font-weight: 700;
+    font-size: 32px;
+    color: #039be5;
   }
 
-  &__logo {
-    background-image: url('/assets/images/logo.jpg');
-    width: 30px;
-    height: 30px;
-    background-size: cover;
+  &__logout {
+    position: absolute;
+    right: 100px;
+    top: 24px;
+    text-align: right;
   }
 }
