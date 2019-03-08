@@ -1,21 +1,38 @@
+<mat-sidenav-container class="example-container">
+  <mat-sidenav
+    #sidenav
+    mode="side"
+    class="example-sidenav"
+    [fixedInViewport]="false"
+    [fixedTopGap]="0"
+    [fixedBottomGap]="0"
+  >
+    <div class="ma-md">
+      <h2>Products</h2>
+    </div>
+  </mat-sidenav>
 
-  <div class="header__title">
-    Bank <span style="color:#666;">X</span>
-  </div>
-  <div class="header__logout">
-    Hallo Herr Musterman!<br/><a href="#">logout</a>
-  </div>
+  <mat-sidenav-content>
+    <div class="ml-md mr-md">
+      <div class="header__title">Bank <span style="color:#666;">X</span></div>
+      <div class="header__logout">
+        Hallo Herr Musterman!<br /><a href="#">logout</a>
+      </div>
 
-<mat-tab-group (selectedTabChange)="onLinkClick($event)">
-  <mat-tab label="Kontoumsätze">
-    <app-analyse></app-analyse>
-  </mat-tab>
-  <mat-tab label="Lorem">
-  </mat-tab>
-  <mat-tab label="Ipsum">
-    </mat-tab>
-  <mat-tab >
-      <ng-template mat-tab-label >Analyse<div id="tabAnalyseNotification">1</div></ng-template>
-      <app-analyse></app-analyse>
-    </mat-tab>
-</mat-tab-group>
+      <mat-tab-group (selectedTabChange)="onLinkClick($event)">
+        <mat-tab label="Kontoumsätze">
+          <app-analyse></app-analyse>
+        </mat-tab>
+        <mat-tab label="Lorem"> </mat-tab>
+        <mat-tab label="Ipsum"> </mat-tab>
+        <mat-tab>
+          <ng-template mat-tab-label
+            >Analyse
+            <div id="tabAnalyseNotification">1</div>
+          </ng-template>
+          <app-analyse (addProduct)="test()"></app-analyse>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
