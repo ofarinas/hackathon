@@ -43,20 +43,20 @@ export class AnalyseComponent implements OnInit {
     this.isOpened = !this.isOpened;
   }
 
-  onChanged() {
-    this.diagramRef['draw']();
-  }
-
   onAddProduct() {
     console.log('ggui');
     this.addProduct.emit();
   }
 
   // computed
-  get expensesTotal() {
-    var sum = 0;
-    this.expenses.forEach(x => (sum += x.value));
+  onChanged() {
+    this.diagramRef['draw']();
+  }
 
+  // computed
+  get expensesTotal() {
+    let sum = 0;
+    this.expenses.forEach(x => (sum += x.value));
     return sum;
   }
 }
