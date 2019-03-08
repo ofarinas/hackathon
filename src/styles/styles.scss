@@ -49,13 +49,18 @@ body {
     height: 100vw;
   }
 
+  &__toolbar {
+  }
+
   &__title {
     font-family: 'Baloo', cursive;
+    display: flex;
   }
 
   &__logo {
     background-image: url('/assets/images/logo.jpg');
-    width: 10px;
-    height: 10px;
+    width: 30px;
+    height: 30px;
+    background-size: cover;
   }
 }
