@@ -13,9 +13,10 @@ import {
   MatIconModule
 } from '@angular/material';
 import { HomeComponent } from './pages/home/home.component';
+import { AnalyseComponent } from './pages/analyse/analyse.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent],
+  declarations: [AppComponent, HomeComponent, AnalyseComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

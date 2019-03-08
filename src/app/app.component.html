@@ -8,15 +8,20 @@
     [fixedBottomGap]="0"
   >
     <mat-list role="list">
-      <mat-list-item role="listitem">Item 1</mat-list-item>
-      <mat-list-item role="listitem">Item 2</mat-list-item>
-      <mat-list-item role="listitem">Item 3</mat-list-item>
+      <mat-list-item role="listitem">
+        <a [routerLink]="['/']">Home</a>
+      </mat-list-item>
+      <mat-list-item role="listitem">
+        <a [routerLink]="['/analyse']">Analyse</a>
+      </mat-list-item>
     </mat-list>
   </mat-sidenav>
 
   <mat-sidenav-content>
     <mat-toolbar class="retire-easy__toolbar">
-      <mat-icon class="mr-md" (click)="sidenav.toggle()">home</mat-icon>
+      <button class="mr-md" mat-button (click)="sidenav.toggle()">
+        <mat-icon>home</mat-icon>
+      </button>
       Retire Easy
     </mat-toolbar>
     <div class="retire-easy__content pa-md">
