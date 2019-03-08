@@ -1,0 +1,26 @@
+<div class="full-width flex justify-between">
+  <mat-form-field class="pr-sm">
+    <input disabled matInput placeholder="amount" [value]="data.title" />
+  </mat-form-field>
+  <mat-form-field class="pr-sm">
+    <input
+      matInput
+      placeholder="amount"
+      #valueField
+      [value]="data.value"
+      (blur)="onValueChange(valueField.value)"
+    />
+  </mat-form-field>
+  <div>
+    0%
+    <mat-slider
+      #inflationField
+      min="1"
+      max="8"
+      step="1"
+      [value]="data.inflation"
+      (change)="onInflationChange(inflationField.value)"
+    ></mat-slider
+    >8%
+  </div>
+</div>

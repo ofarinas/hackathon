@@ -99,90 +99,110 @@
   &a {
     &-xs {
       padding: $xs !important;
+      box-sizing: border-box;
     }
 
     &-sm {
       padding: $sm !important;
+      box-sizing: border-box;
     }
 
     &-md {
       padding: $md !important;
+      box-sizing: border-box;
     }
 
     &-xl {
       padding: $xl !important;
+      box-sizing: border-box;
     }
   }
 
   &t {
     &-xs {
       padding-top: $xs !important;
+      box-sizing: border-box;
     }
 
     &-sm {
       padding-top: $sm !important;
+      box-sizing: border-box;
     }
 
     &-md {
       padding-top: $md !important;
+      box-sizing: border-box;
     }
 
     &-xl {
       padding-top: $xl !important;
+      box-sizing: border-box;
     }
   }
 
   &b {
     &-xs {
       padding-bottom: $xs !important;
+      box-sizing: border-box;
     }
 
     &-sm {
       padding-bottom: $sm !important;
+      box-sizing: border-box;
     }
 
     &-md {
       padding-bottom: $md !important;
+      box-sizing: border-box;
     }
 
     &-xl {
       padding-bottom: $xl !important;
+      box-sizing: border-box;
     }
   }
 
   &l {
     &-xs {
       padding-left: $xs !important;
+      box-sizing: border-box;
     }
 
     &-sm {
       padding-left: $sm !important;
+      box-sizing: border-box;
     }
 
     &-md {
       padding-left: $md !important;
+      box-sizing: border-box;
     }
 
     &-xl {
       padding-left: $xl !important;
+      box-sizing: border-box;
     }
   }
 
   &r {
     &-xs {
       padding-right: $xs !important;
+      box-sizing: border-box;
     }
 
     &-sm {
       padding-right: $sm !important;
+      box-sizing: border-box;
     }
 
     &-md {
       padding-right: $md !important;
+      box-sizing: border-box;
     }
 
     &-xl {
       padding-right: $xl !important;
+      box-sizing: border-box;
     }
   }
 }
@@ -195,8 +215,20 @@
   display: flex;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .justify-center {
   justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
 }
 
 .justify-start {
@@ -209,4 +241,30 @@
 
 .items-center {
   align-items: center;
+}
+
+.box-shadow {
+  box-shadow: 0 0 3px #ccc;
+}
+
+.border-radius {
+  border-radius: 6px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+.diagram-wrapper {
+  height: 15vw;
+  width: 30vw;
+
+  canvas {
+    width: 100% !important;
+    height: 100% !important;
+  }
 }

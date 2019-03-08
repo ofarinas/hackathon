@@ -17,26 +17,21 @@ export class PieDiagrammComponent implements OnInit {
   }
 
   draw() {
+    this.ref.nativeElement
+      .getContext('2d')
+      .clearRect(
+        0,
+        0,
+        this.ref.nativeElement.width,
+        this.ref.nativeElement.height
+      );
+    console.log(this.dataColors);
     var data = {
       datasets: [
         {
           data: this.dataValues,
-          backgroundColor: [
-            'rgba(255, 99, 132, 0.2)',
-            'rgba(54, 162, 235, 0.2)',
-            'rgba(255, 206, 86, 0.2)',
-            'rgba(75, 192, 192, 0.2)',
-            'rgba(153, 102, 255, 0.2)',
-            'rgba(255, 159, 64, 0.2)'
-          ],
-          borderColor: [
-            'rgba(255,99,132,1)',
-            'rgba(54, 162, 235, 1)',
-            'rgba(255, 206, 86, 1)',
-            'rgba(75, 192, 192, 1)',
-            'rgba(153, 102, 255, 1)',
-            'rgba(255, 159, 64, 1)'
-          ]
+          backgroundColor: this.dataColors,
+          borderColor: this.dataColors
         }
       ],
 
@@ -62,5 +57,18 @@ export class PieDiagrammComponent implements OnInit {
 
   get dataTitles() {
     return this.data ? this.data.map(x => x.title) : [];
+  }
+
+  get dataColors() {
+    const getColor = color => {
+      if (color.indexOf(',') > -1) {
+        return `rgb(${color})`;
+      } else return color;
+    };
+    return this.data
+      ? this.data.map(x => {
+          return getColor(x.color);
+        })
+      : [];
   }
 }
