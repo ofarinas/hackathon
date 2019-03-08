@@ -13,10 +13,13 @@ export class AppComponent {
   constructor(private cf: ContentfullService) {}
 
   onLinkClick(event: MatTabChangeEvent) {
-    if (event.index===3) {
+    if (event.index === 3) {
       var element = document.getElementById('tabAnalyseNotification');
       element.parentNode.removeChild(element);
-    } 
+    }
   }
 
+  test() {
+    alert('uggi');
+  }
 }

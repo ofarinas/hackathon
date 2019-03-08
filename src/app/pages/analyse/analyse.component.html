@@ -5,25 +5,30 @@
 <app-pie-diagramm
   [data]="[{ title: 'football', value: 10 }, { title: 'rugby', value: 20 }]"
 ></app-pie-diagramm> -->
-<div class="wrapper box-shadow border-radius mb-md">
-  <div class="expenses pa-xl flex justify-between items-center">
+<div class="row border-bottom no-margin">
+  <div class="expenses mt-xs mb-xs flex justify-between items-center">
     <div class="row full-width">
-      <div class="col" [class.s6]="!isOpened" [class.s2]="isOpened">
-        <div class="expenses__total flex flex-wrap justify-center">
-          <div class="expenses__total-title full-width">Ausgaben</div>
-          <div class="expenses__total-value full-width">
-            {{ expensesTotal | money }}
-          </div>
-        </div>
-      </div>
-      <div class="col" [class.s6]="!isOpened" [class.s5]="isOpened">
+      <div class="tile col s3 border-right">
         <app-pie-diagramm
           #diagram
           class="expenses__diagramm"
           [data]="expenses"
         ></app-pie-diagramm>
       </div>
-      <div class="col s5" *ngIf="showDetails">
+      <div class="tile col border-right s3">
+        <div class="expenses__total flex flex-wrap justify-center">
+          <div class="expenses__total-title full-width">Ausgaben</div>
+          <div class="expenses__total-value full-width">
+            {{ expensesTotal | money }}
+          </div>
+          <button mat-button (click)="toggleDetails()">
+            {{ isOpened ? 'close' : 'details' }}
+          </button>
+        </div>
+      </div>
+      <div *ngIf="!isOpened" class="tile col s3 border-right">test 1</div>
+      <div *ngIf="!isOpened" class="tile col s3">test 2</div>
+      <div class="tile col s6" *ngIf="isOpened">
         <div class="expenses__values">
           <app-value-row
             [data]="e"
@@ -34,12 +39,14 @@
         </div>
       </div>
     </div>
-    <button mat-button (click)="toggleDetails()" class="expenses__action">
-      {{ isOpened ? 'close' : 'details' }}
-    </button>
   </div>
 </div>
 
-<div class="wrapper pa-xl box-shadow border-radius">
+<div class="row pa-xl no-margin">
+  <h2>Vermögensentwicklung</h2>
   <app-bar-diagram [data]="expenses"></app-bar-diagram>
+</div>
+
+<div class="row pa-xl border-bottom no-margin">
+  <button mat-button (click)="onAddProduct()">add Product</button>
 </div>

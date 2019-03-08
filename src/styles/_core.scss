@@ -1,5 +1,9 @@
 @import './vars';
 
+h2 {
+  font-size: 30px !important;
+}
+
 .page {
 }
 
@@ -260,11 +264,26 @@
 }
 
 .diagram-wrapper {
-  height: 15vw;
-  width: 30vw;
+  width: 100%;
 
   canvas {
     width: 100% !important;
     height: 100% !important;
   }
+}
+
+.border-bottom {
+  border-bottom: 1px dashed #ccc;
+}
+
+.border-right {
+  border-right: 1px dashed #ccc;
+}
+
+.border-left {
+  border-left: 1px dashed #ccc;
+}
+
+.no-margin {
+  margin: 0 !important;
 }

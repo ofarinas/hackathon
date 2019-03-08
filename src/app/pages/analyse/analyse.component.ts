@@ -1,4 +1,11 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ViewChild,
+  ElementRef,
+  Output,
+  EventEmitter
+} from '@angular/core';
 import { PieDiagrammComponent } from 'src/app/components/pie-diagramm/pie-diagramm.component';
 import { valueRow } from 'src/app/components/value-row/value-row.component';
 
@@ -9,9 +16,9 @@ import { valueRow } from 'src/app/components/value-row/value-row.component';
 })
 export class AnalyseComponent implements OnInit {
   @ViewChild('diagram') diagramRef: ElementRef<PieDiagrammComponent>;
+  @Output('addProduct') addProduct = new EventEmitter();
 
   isOpened = false;
-  showDetails = false;
   expenses: valueRow[] = [
     { title: 'food', value: 200, inflation: 0, color: '255,99,132' },
     { title: 'free time', value: 150, inflation: 0, color: '54, 162, 235' },
@@ -34,18 +41,15 @@ export class AnalyseComponent implements OnInit {
   // handler
   toggleDetails() {
     this.isOpened = !this.isOpened;
-
-    if (this.isOpened) {
-      setTimeout(() => {
-        this.showDetails = this.isOpened;
-      }, 500);
-    } else {
-      this.showDetails = this.isOpened;
-    }
   }
 
   onChanged() {
     this.diagramRef['draw']();
+  }
+
+  onAddProduct() {
+    console.log('ggui');
+    this.addProduct.emit();
   }
 
   // computed
